@@ -289,6 +289,6 @@ SubLinks Hub 汇集的订阅链接来自以下来源：
 - 讨论功能：[GitHub Discussions](https://github.com/yourusername/sub-links-hub/discussions)
 
 ---
-
-**最后更新**：2026 年 1 月 3 日  
-**维护者**：Manus AI
+Markdown
+*维护者：noxenys*
+*最后更新：2026年1月3日*
