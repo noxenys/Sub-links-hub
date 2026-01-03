@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO subscription_categories (name, icon, description) VALUES ('GitHub 极冷门', '⭐', '极冷门但活跃的 GitHub 项目'), ('Telegram 频道', '📱', 'Telegram 公益频道分享'), ('论坛分享', '💬', '技术论坛中的分享链接'), ('Warp+ 资源', '🌐', 'Cloudflare Warp+ 相关资源');",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2FHwmBjk5UaXsV1.root --database nQvEGZVP2kqQWurmbZ92Fa --execute INSERT INTO subscription_categories (name, icon, description) VALUES ('GitHub 极冷门', '⭐', '极冷门但活跃的 GitHub 项目'), ('Telegram 频道', '📱', 'Telegram 公益频道分享'), ('论坛分享', '💬', '技术论坛中的分享链接'), ('Warp+ 资源', '🌐', 'Cloudflare Warp+ 相关资源');",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 406
+}

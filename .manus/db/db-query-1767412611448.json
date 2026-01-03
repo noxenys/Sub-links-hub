@@ -1,0 +1,19 @@
+{
+  "query": "SELECT COUNT(*) as total_links FROM subscription_links; SELECT COUNT(*) as total_categories FROM subscription_categories;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2FHwmBjk5UaXsV1.root --database nQvEGZVP2kqQWurmbZ92Fa --execute SELECT COUNT(*) as total_links FROM subscription_links; SELECT COUNT(*) as total_categories FROM subscription_categories;",
+  "rows": [
+    {
+      "total_links": "14"
+    },
+    {
+      "total_links": "total_categories"
+    },
+    {
+      "total_links": "4"
+    }
+  ],
+  "messages": [],
+  "stdout": "total_links\n14\ntotal_categories\n4\n",
+  "stderr": "",
+  "execution_time_ms": 449
+}
