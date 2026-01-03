@@ -12,7 +12,7 @@ COPY . .
 
 # 5. 安装依赖并构建项目
 # --production 只安装生产环境依赖
-RUN pnpm install --production
+RUN pnpm install
 # 假设您的 package.json 中有 "build" 脚本
 RUN pnpm build
 
