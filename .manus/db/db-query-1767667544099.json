@@ -1,0 +1,9 @@
+{
+  "query": "DELETE FROM subscription_links WHERE url = 'https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2FHwmBjk5UaXsV1.root --database nQvEGZVP2kqQWurmbZ92Fa --execute DELETE FROM subscription_links WHERE url = 'https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 61
+}

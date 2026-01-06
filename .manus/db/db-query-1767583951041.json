@@ -1,0 +1,108 @@
+{
+  "query": "SELECT id, title, url, protocol, stability FROM subscription_links WHERE isActive = 1 ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2FHwmBjk5UaXsV1.root --database nQvEGZVP2kqQWurmbZ92Fa --execute SELECT id, title, url, protocol, stability FROM subscription_links WHERE isActive = 1 ORDER BY id;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "SnapdragonLee/SystemProxy",
+      "url": "https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config.yaml",
+      "protocol": "Clash",
+      "stability": "high"
+    },
+    {
+      "id": "2",
+      "title": "SnapdragonLee/SystemProxy (Extra)",
+      "url": "https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config_extra.yaml",
+      "protocol": "Clash",
+      "stability": "high"
+    },
+    {
+      "id": "3",
+      "title": "zhongfly/clash-config",
+      "url": "https://raw.githubusercontent.com/zhongfly/clash-config/master/clash.yml",
+      "protocol": "Clash",
+      "stability": "high"
+    },
+    {
+      "id": "4",
+      "title": "kort0881/vpn-vless-configs-russia",
+      "url": "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/subscriptions/all.txt",
+      "protocol": "VLESS/VMESS",
+      "stability": "medium"
+    },
+    {
+      "id": "5",
+      "title": "mermeroo/V2RAY-CLASH-BASE64",
+      "url": "https://github.com/mermeroo/V2RAY-CLASH-BASE64-Subscription.Links/blob/main/SUB%20LINKS",
+      "protocol": "Mixed",
+      "stability": "medium"
+    },
+    {
+      "id": "6",
+      "title": "SSRSUB 代理分享",
+      "url": "https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml",
+      "protocol": "Clash",
+      "stability": "high"
+    },
+    {
+      "id": "7",
+      "title": "SSRSUB - V2ray 订阅",
+      "url": "https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray",
+      "protocol": "V2ray",
+      "stability": "high"
+    },
+    {
+      "id": "8",
+      "title": "SSRSUB - SS 订阅",
+      "url": "https://raw.githubusercontent.com/ssrsub/ssr/master/ss-sub",
+      "protocol": "Shadowsocks",
+      "stability": "high"
+    },
+    {
+      "id": "9",
+      "title": "几鸡每日公告",
+      "url": "t.me/ngcssnews",
+      "protocol": "Mixed",
+      "stability": "high"
+    },
+    {
+      "id": "10",
+      "title": "马铃薯公益通知",
+      "url": "t.me/my_mlshu",
+      "protocol": "Mixed",
+      "stability": "medium"
+    },
+    {
+      "id": "11",
+      "title": "Warp+ 无限制订阅 (Clash)",
+      "url": "https://subs.zeabur.app/clash",
+      "protocol": "Clash",
+      "stability": "high"
+    },
+    {
+      "id": "12",
+      "title": "Warp+ 无限制订阅 (Surge)",
+      "url": "https://subs.zeabur.app/surge",
+      "protocol": "Surge",
+      "stability": "high"
+    },
+    {
+      "id": "13",
+      "title": "HostLoc 公益机场汇总",
+      "url": "https://hostloc.com/forum.php?mod=forumdisplay&fid=46",
+      "protocol": "Mixed",
+      "stability": "medium"
+    },
+    {
+      "id": "14",
+      "title": "Warp 官方项目",
+      "url": "https://tofree.zeabur.app",
+      "protocol": "Warp+",
+      "stability": "high"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\turl\tprotocol\tstability\n1\tSnapdragonLee/SystemProxy\thttps://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config.yaml\tClash\thigh\n2\tSnapdragonLee/SystemProxy (Extra)\thttps://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config_extra.yaml\tClash\thigh\n3\tzhongfly/clash-config\thttps://raw.githubusercontent.com/zhongfly/clash-config/master/clash.yml\tClash\thigh\n4\tkort0881/vpn-vless-configs-russia\thttps://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/main/subscriptions/all.txt\tVLESS/VMESS\tmedium\n5\tmermeroo/V2RAY-CLASH-BASE64\thttps://github.com/mermeroo/V2RAY-CLASH-BASE64-Subscription.Links/blob/main/SUB%20LINKS\tMixed\tmedium\n6\tSSRSUB 代理分享\thttps://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml\tClash\thigh\n7\tSSRSUB - V2ray 订阅\thttps://raw.githubusercontent.com/ssrsub/ssr/master/v2ray\tV2ray\thigh\n8\tSSRSUB - SS 订阅\thttps://raw.githubusercontent.com/ssrsub/ssr/master/ss-sub\tShadowsocks\thigh\n9\t几鸡每日公告\tt.me/ngcssnews\tMixed\thigh\n10\t马铃薯公益通知\tt.me/my_mlshu\tMixed\tmedium\n11\tWarp+ 无限制订阅 (Clash)\thttps://subs.zeabur.app/clash\tClash\thigh\n12\tWarp+ 无限制订阅 (Surge)\thttps://subs.zeabur.app/surge\tSurge\thigh\n13\tHostLoc 公益机场汇总\thttps://hostloc.com/forum.php?mod=forumdisplay&fid=46\tMixed\tmedium\n14\tWarp 官方项目\thttps://tofree.zeabur.app\tWarp+\thigh\n",
+  "stderr": "",
+  "execution_time_ms": 401
+}

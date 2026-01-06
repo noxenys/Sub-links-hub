@@ -274,7 +274,7 @@ SubLinks Hub 汇集的订阅链接来自以下来源：
 
 ## 👨‍💻 作者
 
-**SubLinks Hub** 由 Manus AI 创建和维护。
+**SubLinks Hub** 由 Manus AI/Noxen ys 创建和维护。
 
 ## 🔗 相关资源
 
@@ -289,5 +289,7 @@ SubLinks Hub 汇集的订阅链接来自以下来源：
 - 讨论功能：[GitHub Discussions](https://github.com/yourusername/sub-links-hub/discussions)
 
 ---
-*维护者：noxenys*
-*最后更新：2026年1月3日*
+
+**最后更新**：2026 年 1 月 3 日  
+**维护者**：Noxen ys
+**项目地址**：[https://github.com/noxenys/Sub-links-hub](https://github.com/noxenys/Sub-links-hub)

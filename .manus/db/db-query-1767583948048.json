@@ -1,0 +1,9 @@
+{
+  "query": "DELETE FROM subscription_links WHERE url IN (\n  'https://raw.githubusercontent.com/mermeroo/V2RAY-CLASH-BASE64-Subscription.Links/main/sub.txt',\n  'https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/main/clash.yaml',\n  'https://rentry.co/clash-sub-links/raw',\n  'https://gitlab.com/thuhollow2/cn/-/raw/main/sub.txt'\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2FHwmBjk5UaXsV1.root --database nQvEGZVP2kqQWurmbZ92Fa --execute DELETE FROM subscription_links WHERE url IN (\n  'https://raw.githubusercontent.com/mermeroo/V2RAY-CLASH-BASE64-Subscription.Links/main/sub.txt',\n  'https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/main/clash.yaml',\n  'https://rentry.co/clash-sub-links/raw',\n  'https://gitlab.com/thuhollow2/cn/-/raw/main/sub.txt'\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 411
+}

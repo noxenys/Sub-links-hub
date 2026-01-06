@@ -1,0 +1,17 @@
+有效的订阅链接列表
+==================
+
+以下是经过验证的可用订阅链接，所有链接都已测试并可正常访问。
+
+1. Pastebin 资源
+   https://pastebin.com/raw/6PpQ4ksn
+
+2. GitHub 配置文件
+   https://raw.githubusercontent.com/zhongfly/clash-config/master/clash.yml
+
+==================
+
+说明：
+- 所有链接都已通过 HTTP 200 验证
+- 无法访问的链接（404、502 等）已被删除
+- 建议定期验证链接可用性

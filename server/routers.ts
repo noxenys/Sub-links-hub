@@ -3,6 +3,18 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { getAllCategories, getAllLinks, getLinksByCategory, createLink, updateLink, deleteLink, createCategory } from "./db";
+import {
+  createNotification,
+  getNotifications,
+  getUnreadNotifications,
+  markNotificationAsRead,
+  deleteNotification,
+  // getStripeProducts,
+  // getUserSubscriptions,
+  // getUserTransactions,
+} from "./db-notifications";
+// Stripe imports temporarily disabled
+// import { createCheckoutSession, createSubscriptionCheckoutSession } from "./stripe-service";
 import { z } from "zod";
 import { TRPCError } from "@trpc/server";
 
@@ -111,6 +123,44 @@ export const appRouter = router({
         }
       }),
   }),
+
+  notifications: router({
+    getAll: publicProcedure
+      .input(z.object({ limit: z.number().default(20) }).optional())
+      .query(async ({ input, ctx }) => {
+        const userId = ctx.user?.openId;
+        if (!userId) return [];
+        return await getNotifications(userId, input?.limit || 20);
+      }),
+
+    getUnread: publicProcedure
+      .query(async ({ ctx }) => {
+        const userId = ctx.user?.openId;
+        if (!userId) return [];
+        return await getUnreadNotifications(userId);
+      }),
+
+    markAsRead: publicProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input, ctx }) => {
+        const userId = ctx.user?.openId;
+        if (!userId) throw new TRPCError({ code: "UNAUTHORIZED" });
+        await markNotificationAsRead(input.id);
+        return { success: true };
+      }),
+
+    delete: publicProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input, ctx }) => {
+        const userId = ctx.user?.openId;
+        if (!userId) throw new TRPCError({ code: "UNAUTHORIZED" });
+        await deleteNotification(input.id);
+        return { success: true };
+      }),
+  }),
+
+  // Stripe payment routes temporarily disabled - will be enabled when Stripe account is set up
+  // payments: router({ ... }),
 });
 
 export type AppRouter = typeof appRouter;

@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Pastebin 资源",
+    "url": "https://pastebin.com/raw/6PpQ4ksn",
+    "source": "pastebin",
+    "statusCode": 200
+  },
+  {
+    "title": "GitHub 配置文件",
+    "url": "https://raw.githubusercontent.com/zhongfly/clash-config/master/clash.yml",
+    "source": "github",
+    "statusCode": 200
+  }
+]

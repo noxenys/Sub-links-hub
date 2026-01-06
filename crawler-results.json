@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-01-06T02:43:09.993Z",
+  "totalFound": 21,
+  "afterDedup": 21,
+  "validLinks": 1,
+  "bySource": {
+    "telegram": 1
+  },
+  "links": [
+    {
+      "url": "https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml",
+      "source": "telegram",
+      "channel": "SSRSUB",
+      "type": "http",
+      "statusCode": 200,
+      "valid": true
+    }
+  ]
+}

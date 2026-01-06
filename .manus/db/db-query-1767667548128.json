@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO subscription_links (title, url, description, protocol, stability, categoryId, isActive, tags) \nVALUES (\n  'Telegram SSRSUB 频道',\n  'https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml',\n  '从 Telegram SSRSUB 频道爬取的 Clash 配置',\n  'clash',\n  'high',\n  1,\n  1,\n  '[\"telegram\",\"ssrsub\",\"clash\"]'\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2FHwmBjk5UaXsV1.root --database nQvEGZVP2kqQWurmbZ92Fa --execute INSERT INTO subscription_links (title, url, description, protocol, stability, categoryId, isActive, tags) \nVALUES (\n  'Telegram SSRSUB 频道',\n  'https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml',\n  '从 Telegram SSRSUB 频道爬取的 Clash 配置',\n  'clash',\n  'high',\n  1,\n  1,\n  '[\"telegram\",\"ssrsub\",\"clash\"]'\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 60
+}

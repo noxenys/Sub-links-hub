@@ -15,6 +15,13 @@
       "when": 1767412357196,
       "tag": "0001_sharp_the_enforcers",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1767501404058,
+      "tag": "0002_glorious_maddog",
+      "breakpoints": true
     }
   ]
 }
