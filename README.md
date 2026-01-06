@@ -1,11 +1,16 @@
 # SubLinks Hub - 隐秘订阅链接导航平台
 
+[中文](#中文) | [English](#english)
+
+---
+
+<a id="中文"></a>
+## 📖 项目介绍
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-22.13.0-green.svg)](https://nodejs.org/)
 [![React](https://img.shields.io/badge/React-19-blue.svg)](https://react.dev/)
 [![Database](https://img.shields.io/badge/Database-MySQL-orange.svg)](https://www.mysql.com/)
-
-## 📖 项目介绍
 
 **SubLinks Hub** 是一个专为代理订阅链接优化的导航平台。该项目精选了来自 GitHub、Telegram、技术论坛和公益资源的 **14 个极冷门但高活跃度的订阅链接**，旨在为用户提供稳定、隐秘、难以被封锁的代理节点资源。
 
@@ -80,7 +85,6 @@ pnpm dev
 访问 `http://localhost:3000` 查看应用。
 
 ## 📁 项目结构
-
 ```
 sub-links-hub/
 ├── client/                    # 前端应用（React + Vite）
@@ -160,7 +164,6 @@ const links = await trpc.subscriptions.linksByCategory.query({ categoryId: 1 });
 ```
 
 ### 创建新链接
-
 ```typescript
 const result = await trpc.subscriptions.createLink.mutate({
   categoryId: 1,
@@ -209,20 +212,24 @@ const result = await trpc.subscriptions.deleteLink.mutate({ id: 1 });
 SubLinks Hub 汇集的订阅链接来自以下来源：
 
 ### GitHub 极冷门项目
+
 - **SnapdragonLee/SystemProxy**：Star 97，Fork 11，高频更新
 - **zhongfly/clash-config**：极简命名，长期维护
 - **kort0881/vpn-vless-configs-russia**：伪装命名，全球节点
 
 ### Telegram 公益频道
+
 - **SSRSUB**：52K 订阅，每日更新
 - **几鸡每日公告**：小圈子自用，稳定性高
 - **马铃薯公益通知**：限速但稳定的公益套餐
 
 ### 技术论坛分享
+
 - **V2EX Warp+ 分享**：基于 Cloudflare Warp+ 的无限流量节点
 - **HostLoc 公益机场汇总**：论坛大佬整理的防失联列表
 
 ### Warp+ 特殊资源
+
 - **Cloudflare Warp 官方项目**：官方配置，稳定性最高
 
 ## 📝 使用指南
@@ -274,7 +281,7 @@ SubLinks Hub 汇集的订阅链接来自以下来源：
 
 ## 👨‍💻 作者
 
-**SubLinks Hub** 由 Manus AI/Noxen ys 创建和维护。
+**SubLinks Hub** 由 Noxenys 创建和维护。
 
 ## 🔗 相关资源
 
@@ -292,4 +299,102 @@ SubLinks Hub 汇集的订阅链接来自以下来源：
 
 **最后更新**：2026 年 1 月 6 日  
 **维护者**：Noxenys  
-**项目地址**：[https://github.com/noxenys/Sub-links-hub](https://github.com/noxenys/Sub-links-hub )  
+**项目地址**：[https://github.com/noxenys/Sub-links-hub](https://github.com/noxenys/Sub-links-hub)
+
+---
+---
+<a id="english"></a>
+# SubLinks Hub - Covert Subscription Link Navigator
+
+[中文](#中文) | [English](#english)
+
+## 🌐 Project Overview
+
+**SubLinks Hub** is a specialized navigation platform designed for proxy subscription links. It curates a selection of **14 highly obscure yet actively maintained subscription links** sourced from GitHub, Telegram public channels, and technical forums. The primary goal is to provide users with stable, covert, and less-congested proxy resources.
+
+Unlike mainstream subscription aggregators, SubLinks Hub focuses on niche projects with low visibility (e.g., GitHub projects with < 100 Stars). Due to their low profile, these resources often avoid large-scale blocking and network congestion, offering a more stable connection experience.
+
+### ✨ Key Features
+
+*   **Curated Niche Resources**: Gathers links from low-star GitHub projects, small Telegram channels, and forum shares.
+*   **Database Driven**: All subscription links are stored in a MySQL database, supporting real-time updates and dynamic management.
+*   **One-Click Copy**: Clean UI design for easy one-click copying of subscription URLs.
+*   **Categorized Navigation**: Links are grouped into 4 categories based on their source for quick access.
+*   **Stability Tags**: Each link is tagged with a stability rating (High/Medium/Low) to aid user selection.
+*   **Responsive Design**: Optimized for both desktop and mobile devices.
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+*   Node.js 22.13.0 or higher
+*   pnpm 10.4.1 or higher
+*   MySQL 8.0 or higher
+
+### Local Development
+
+#### 1. Clone the Repository
+
+```shell
+git clone https://github.com/noxenys/Sub-links-hub.git
+cd Sub-links-hub
+```
+
+#### 2. Install Dependencies
+
+```shell
+pnpm install
+```
+
+#### 3. Configure Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```shell
+# Database Connection
+DATABASE_URL="mysql://user:password@localhost:3306/sub_links_hub"
+
+# Application Configuration
+VITE_APP_TITLE="SubLinks Hub"
+```
+
+#### 4. Initialize Database
+
+```shell
+# Run database migrations
+pnpm db:push
+
+# Import initial data
+node scripts/seed-db.mjs
+```
+
+#### 5. Start the Development Server
+
+```shell
+pnpm dev
+```
+
+Access `http://localhost:3000` to view the application.
+
+## 🛠️ Technology Stack
+
+| Layer | Technology | Version |
+| :--- | :--- | :--- |
+| **Frontend** | React | 19 |
+| **Build Tool** | Vite | 7.1.7 |
+| **Styling** | Tailwind CSS | 4 |
+| **Backend** | Express | 4.21.2 |
+| **API** | tRPC | Latest |
+| **Database** | MySQL | 8.0+ |
+| **ORM** | Drizzle | Latest |
+
+## ⚠️ Disclaimer
+
+*   This project is a navigation tool for publicly available subscription links.
+*   Users are solely responsible for the consequences of using these links.
+*   Please comply with local laws and regulations.
+*   This project does not provide any proxy services; it is an information aggregation platform.
+
+---
+*Maintainer: noxenys*
+*Last Updated: January 6, 2026*
