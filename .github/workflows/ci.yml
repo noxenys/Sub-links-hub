@@ -38,7 +38,23 @@ jobs:
         env:
           MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: sub_links_hub_test
-        # 保持 3306 端口映射，这与您在 Manus 上的环境一致
+        # 保持 3306 端口映射，以便在测试中使用 localhost 连接
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+  test:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: sub_links_hub_test
         ports:
           - 3306:3306
         options: >-
@@ -49,19 +65,27 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22.13.0
           cache: 'pnpm'
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Push DB Schema
+        run: pnpm db:push
+        env:
+          DATABASE_URL: mysql://root:root@127.0.0.1:3306/sub_links_hub_test
+
       - name: Run tests
         run: pnpm test
         env:
-          # 在 GitHub Actions 中，127.0.0.1:3306 指向上面启动的 service
           DATABASE_URL: mysql://root:root@127.0.0.1:3306/sub_links_hub_test
           NODE_ENV: test
 
