@@ -31,6 +31,10 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          # 新增：在 main 分支推送时，同时生成 main 和 latest 两个标签
+          tags: |
+            type=raw,value=main
+            type=raw,value=latest,enable={{is_default_branch}}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
