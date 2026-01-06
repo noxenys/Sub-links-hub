@@ -290,6 +290,6 @@ SubLinks Hub 汇集的订阅链接来自以下来源：
 
 ---
 
-**最后更新**：2026 年 1 月 3 日  
-**维护者**：Noxen ys
-**项目地址**：[https://github.com/noxenys/Sub-links-hub](https://github.com/noxenys/Sub-links-hub)
+**最后更新**：2026 年 1 月 6 日  
+**维护者**：Noxenys  
+**项目地址**：[https://github.com/noxenys/Sub-links-hub](https://github.com/noxenys/Sub-links-hub )  
