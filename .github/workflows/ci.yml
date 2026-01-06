@@ -21,7 +21,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 10.4.1 # 严格对齐 README 中的版本
+          version: 10.4.1
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -65,7 +65,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 10.4.1 # 严格对齐 README 中的版本
+          version: 10.4.1
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -81,3 +81,9 @@ jobs:
         env:
           DATABASE_URL: mysql://root:root@127.0.0.1:3306/sub_links_hub_test
           NODE_ENV: test
+
+      # 核心调试步骤：测试失败时，自动输出 MySQL 日志
+      - name: Dump MySQL Logs on Failure
+        if: failure()
+        run: docker logs mysql
+        shell: bash
